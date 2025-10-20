@@ -30,7 +30,7 @@ def building(user_input: str):
 
 def ask_argument():
     while True:
-        user_input = input("Please enter a string: ")
+        user_input = sys.stdin.readline()
         if len(user_input) > 0:
             break
         else:
