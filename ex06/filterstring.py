@@ -6,25 +6,22 @@ School: 42 Paris
 """
 
 import sys
-from ft_filter import ft_filter 
-
-
-def ft_filter_string(S: str, N: int):
-    string_format = S.split()
-    result = [item for item in string_format if lambda s: len(s) >= N]
-    return result
 
 
 def main():
     try:
         assert len(sys.argv) == 3, "Wrong number of arguments"
         assert len(sys.argv[1]) > 0, "First argument can't be an empty string"
-        assert sys.argv[2].isdigit() and int(sys.argv[2]) >= 0, "Second argument must be a positiv integer"
-        result = ft_filter_string(sys.argv[1], int(sys.argv[2]))
-        print(f"result: {result}")
+        assert sys.argv[2].isdigit() and int(sys.argv[2]) >= 0, (
+            "Second argument must be a positiv integer"
+        )
+        result = (lambda S, N: [item for item in S if len(item) >= N])(
+            sys.argv[1].split(), int(sys.argv[2])
+        )
+        print(f"{result}")
     except AssertionError as e:
-        sys.stderr(e)
-    return
+        print(f"AssertionError: {e}")
+    return 1
 
 
 if __name__ == "__main__":
