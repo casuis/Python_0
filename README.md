@@ -32,14 +32,21 @@ Python0/
 │ └── hello.py
 │
 ├── ex01/
-│ └── format.py
+│ └── format_ft_time.py
 │
 ├── ex02/
-│ └── operations.py
+│ └── find_ft_type.py
 │
 ├── ex03/
-│ └── whatis.py
+│ └── NULL_not_found.py
 │
 └── ex04/
-└── filterwords.py
+| └── whatis.py
+
+└── ex05/
+| └── building.py
+
+└── ex06/
+| └── ft_filter.py
+| └── filterstring.py
 ```
