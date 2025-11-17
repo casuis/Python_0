@@ -8,11 +8,31 @@ School: 42 Paris
 
 import sys
 import time
+import os
+
+def calc_bar_length(prefix: str, suffix: str) -> int:
+    term_width = os.get_terminal_size().columns
+    
+    # caractères réservés par tqdm (|, espaces, etc.)
+    reserved = 10  
+    
+    bar_len = term_width - len(prefix) - len(suffix) - reserved
+    if bar_len < 1:
+        bar_len = 1
+    
+    return bar_len
+
+
 
 
 def ft_tqdm(lst: range) -> None:
+    '''
+    This Function imitate the comportementof the tqdm function from the
+    tqdm Lib  
+    It waiting as parameter a range wich reprensente the total pkg and the current state
+    '''
     total = len(lst)
-    bar_len = 89
+    bar_len = int((os.get_terminal_size().columns / 100) * 70) - 10
     start = time.time()
     for i in lst:
         percent = (i + 1) / total
