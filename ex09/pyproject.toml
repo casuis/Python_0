@@ -1,0 +1,19 @@
+[project]
+name = "ft_package"
+version = "0.1.0"
+description = "Package exercice for 42 school"
+authors = [
+    { name = "asimon", email = "asimon@student.42.fr"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+homepage = "http"
+
+dependencies = []
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
