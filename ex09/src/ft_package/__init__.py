@@ -1,1 +1,1 @@
-from .module import hello, print
+from .module import hello, ft_print

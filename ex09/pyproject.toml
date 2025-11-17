@@ -1,16 +1,21 @@
 [project]
 name = "ft_package"
 version = "0.1.0"
-description = "Package exercice for 42 school"
+description = "A sample test package"
 authors = [
-    { name = "asimon", email = "asimon@student.42.fr"}
+    { name = "asimon" },
+    { email = "asimon@student.42.fr" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
-license = {file = "LICENSE"}
-homepage = "http"
+license = "MIT"
+license-files = ["LICENSE"]
 
 dependencies = []
+
+[project.urls]
+homepage = "https://github.com/casuis/Python_0/tree/master/ex09"
+
 
 [tool.setuptools]
 package-dir = {"" = "src"}
